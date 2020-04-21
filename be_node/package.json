@@ -4,7 +4,7 @@
   "description": "department manager",
   "main": "node app.js",
   "scripts": {
-    "start": "node "
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",

@@ -2,6 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3500
 
-app.get('/', (req, res) => res.send('Hello World!'))
+class Department {
+    constructor(id, name, regionId) {
+        this.id = id;
+        this.name = name;
+        this.regionId = regionId;
+    }
+}
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:ś${port}`))
+const greenHill = new Department(34, "Subaciaus 85", 'abd124')
+
+app.get('/', (req, res) => res.json(greenHill))
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
